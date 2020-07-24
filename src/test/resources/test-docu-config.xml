@@ -1,0 +1,15 @@
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:docu="http://www.mulesoft.org/schema/mule/docu"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+          http://www.mulesoft.org/schema/mule/docu http://www.mulesoft.org/schema/mule/docu/current/mule-docu.xsd">
+
+    <docu:config name="docu-config"
+                 authURI="account-d.docusign.com"
+                 userId="691e44d0-5ba2-47bf-b584-edcd91aab2ab"/>
+
+    <flow name="getUserAccessToken">
+        <docu:get-user-access-token config-ref="docu-config"/>
+    </flow>
+
+</mule>
