@@ -2,13 +2,13 @@
 ## Introduction
 
 This project contains a module that extends the Mule 4 Runtime to simplify JWT-based authentication with the DocuSign e-signature service.
-It contains a single Mule operation which, when included in a flow, makes it easy to obtain the OAuth token which can then be used in HTTPS requests to the DocuSign service.
+It contains a single Mule operation which obtains the OAuth token for the specified DocuSign user, which can then be used in the Authorization header of any subsequent HTTPS requests to the DocuSign service.
 
-It is assumed that you already have access to a demo/sandbox DocuSign account, and are able to authenticate as the user you wish to impersonate within your Mule flow - see the "Provide Consent" section below.
+It is assumed that you already have access to a demo/sandbox DocuSign account, and are able to perform the one-time authentication as the user you wish to impersonate within your Mule flow - see the "Provide Consent" section below.
 
 ## Installation
 
-Download the release JAR file and load it into your Maven repository.
+Download the release JAR file and load it into your Anypoint Studio Maven repository.
 Once present, you can add a dependency to your pom.xml to incorporate the module:
 
 > <dependency\>
