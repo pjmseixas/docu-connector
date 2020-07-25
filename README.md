@@ -15,7 +15,7 @@ Once present, you can add a dependency to your pom.xml to incorporate the module
 > <version\>0.1.0\</version\>
 > <classifier\>mule-plugin\</classifier\>
 > </dependency\>
-> 
+
 ## Provide Consent
 
 Before you can use the connector, you will need to provide consent for it to impersonate your DocuSign user, click on the link below to do so:
