@@ -37,7 +37,7 @@ The component requires that an associated configuration is defined that specifie
 
 + The Base Path for the OAuth token request
     + "account-d.docusign.com" (for a demo/sandbox account), or
-    + "account.docusign.com" (for a production accouint)
+    + "account.docusign.com" (for a production account)
 + The guid identifier for the DocuSign user that you wish to have the docu-connector impersonate
 
 ![DocuSign Config](/images/docusign-config.png)
