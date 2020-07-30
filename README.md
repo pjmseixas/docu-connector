@@ -29,16 +29,18 @@ Before you can use the connector, you will need to provide consent for it to imp
 > [Provide Consent](https://account-d.docusign.com/oauth/auth?response_type=code&scope=signature%20impersonation&client_id=480bf239-9265-4f94-a333-5b1eebde0300&redirect_uri=https://www.mule.org.uk/docu-connector/)
 
 ## Usage
-The "Get user access token" operation can be placed into your flow like any other component, and requires that a configuration is associated that specifies:
-
-+ The Base Path for the OAuth token request, which should be either "account-d.docusign.com" or "account.docusign.com"
-+ The guid version of the DocuSign user that you wish to have the docu-connector impersonate
-
-![DocuSign Config](/images/docusign-config.png)
-
-If you wish to, the access token returned can be assigned to a target variable of your choosing:
+The "Get user access token" component can be placed into your flow like any other component, with the access token being assigned to a target variable of your choosing:
 
 ![Get user access token target](/images/get-user-access-token-target.png)
+
+The component requires that an associated configuration is defined that specifies:
+
++ The Base Path for the OAuth token request
+    + "account-d.docusign.com" (for a demo/sandbox account), or
+    + "account.docusign.com" (for a production accouint)
++ The guid identifier for the DocuSign user that you wish to have the docu-connector impersonate
+
+![DocuSign Config](/images/docusign-config.png)
 
 The access token returned can be incorporated into the "Authorization" header of any subsequent HTTPS requests to the DocuSign service for the following hour:
 
