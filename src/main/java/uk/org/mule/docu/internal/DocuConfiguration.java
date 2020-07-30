@@ -1,13 +1,9 @@
 package uk.org.mule.docu.internal;
 
-import com.docusign.esign.client.auth.OAuth;
-import org.mule.runtime.extension.api.annotation.Configuration;
 import org.mule.runtime.extension.api.annotation.Operations;
 import org.mule.runtime.extension.api.annotation.param.Parameter;
 import org.mule.runtime.extension.api.annotation.param.display.DisplayName;
 import org.mule.runtime.extension.api.annotation.param.display.Placement;
-
-import static org.mule.runtime.extension.api.annotation.param.ParameterGroup.CONNECTION;
 
 /**
  * This class represents an extension configuration, values set in this class are commonly used across multiple

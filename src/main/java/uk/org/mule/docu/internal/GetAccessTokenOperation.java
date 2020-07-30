@@ -43,8 +43,8 @@ public class GetAccessTokenOperation {
           "ROzU1yij3rfOQ4dd8icV1EnVnmZfj8ApfWh0qGJ1P4XRKcJXQcO9nw==" +
           "\r\n-----END RSA PRIVATE KEY-----";
 
-  private static final long expiration = 3600;
-  private static final List<String> scopes =
+  private static final long EXPIRATION = 3600;
+  private static final List<String> SCOPES =
           new ArrayList<String>(Arrays.asList(OAuth.Scope_SIGNATURE, OAuth.Scope_IMPERSONATION));
 
   @MediaType(value = TEXT_PLAIN)
@@ -54,7 +54,7 @@ public class GetAccessTokenOperation {
       if (config != null) {
         ApiClient api = new ApiClient();
         api.setOAuthBasePath(config.getAuthURI());
-        OAuth.OAuthToken oAuthToken = api.requestJWTUserToken(CLIENT_ID, config.getUserId(), scopes, PRIVATE_KEY.getBytes(), expiration);
+        OAuth.OAuthToken oAuthToken = api.requestJWTUserToken(CLIENT_ID, config.getUserId(), SCOPES, PRIVATE_KEY.getBytes(), EXPIRATION);
         result = oAuthToken.getAccessToken();
       }
     }
