@@ -1,8 +1,8 @@
 # docu-connector
 ## Introduction
 
-This repository contains a module that extends the Mule 4 Runtime to simplify JWT-based authentication with the DocuSign e-signature service.
-Once incorporated into Anypoint Studio, it provides a single Mule component which simplifies the process of obtaining an OAuth token, for a specified DocuSign user, which can then be used in the Authorization header of any subsequent HTTPS-based API requests to the DocuSign service.
+This repository contains a module that extends Mule 4 to simplify JWT-based authentication with the DocuSign e-signature service.
+Once incorporated into your Anypoint Studio project, it provides a single Mule component which simplifies the process of obtaining an OAuth token, for a specified DocuSign user, which can then be used in the Authorization header of any subsequent HTTPS-based API requests to the DocuSign service.
 
 It is assumed that you already have access to a demo/sandbox DocuSign account, and are able to perform the one-time authentication as the user you wish to impersonate within your Mule flow - see the "Provide Consent" section below.
 
