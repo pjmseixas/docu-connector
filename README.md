@@ -11,12 +11,14 @@ It is assumed that you already have access to a demo/sandbox DocuSign account, a
 Download the release JAR file and load it into your Anypoint Studio Maven repository.
 Once present, you can add a dependency to your pom.xml to incorporate the module:
 
-> <dependency\>
-> <groupid\>uk.org.mule.docu\</groupid\>
-> <artifactid\>docu-connector\</artifactid\>
-> <version\>0.1.0\</version\>
-> <classifier\>mule-plugin\</classifier\>
-> </dependency\>
+```xml
+<dependency\>  
+  <groupid\>uk.org.mule.docu\</groupid\>  
+  <artifactid\>docu-connector\</artifactid\>  
+  <version\>0.1.0\</version\>  
+  <classifier\>mule-plugin\</classifier\>  
+</dependency\>  
+```
 
 ## Provide Consent
 
