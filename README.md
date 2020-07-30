@@ -13,10 +13,10 @@ Once present, you can add a dependency to your pom.xml to incorporate the module
 
 ```xml
 <dependency>  
-  <groupid>uk.org.mule.docu\</groupid>  
-  <artifactid>docu-connector\</artifactid>  
-  <version>0.1.0\</version>  
-  <classifier>mule-plugin\</classifier>  
+  <groupid>uk.org.mule.docu</groupid>  
+  <artifactid>docu-connector</artifactid>  
+  <version>0.1.0</version>  
+  <classifier>mule-plugin</classifier>  
 </dependency>  
 ```
 
