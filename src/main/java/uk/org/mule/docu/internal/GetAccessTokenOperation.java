@@ -1,10 +1,12 @@
 package uk.org.mule.docu.internal;
 
 import com.docusign.esign.client.ApiClient;
+import com.docusign.esign.client.ApiException;
 import com.docusign.esign.client.auth.OAuth;
+import org.mule.runtime.extension.api.annotation.error.Throws;
 import org.mule.runtime.extension.api.annotation.param.Config;
 import org.mule.runtime.extension.api.annotation.param.MediaType;
-import uk.org.mule.docu.api.DocuException;
+import org.mule.runtime.extension.api.exception.ModuleException;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -43,23 +45,34 @@ public class GetAccessTokenOperation {
           "ROzU1yij3rfOQ4dd8icV1EnVnmZfj8ApfWh0qGJ1P4XRKcJXQcO9nw==" +
           "\r\n-----END RSA PRIVATE KEY-----";
 
+  private static final String CONSENT_REQUIRED = "consent_required";
   private static final long EXPIRATION = 3600;
   private static final List<String> SCOPES =
           new ArrayList<String>(Arrays.asList(OAuth.Scope_SIGNATURE, OAuth.Scope_IMPERSONATION));
 
   @MediaType(value = TEXT_PLAIN)
-  public String getUserAccessToken(@Config DocuConfiguration config) throws DocuException {
+  @Throws(DocuErrorsProvider.class)
+  public String getUserAccessToken(@Config DocuConfiguration config) {
     String result = null;
     try {
       if (config != null) {
         ApiClient api = new ApiClient();
         api.setOAuthBasePath(config.getAuthURI());
         OAuth.OAuthToken oAuthToken = api.requestJWTUserToken(CLIENT_ID, config.getUserId(), SCOPES, PRIVATE_KEY.getBytes(), EXPIRATION);
-        result = oAuthToken.getAccessToken();
+        if (oAuthToken != null) {
+          result = oAuthToken.getAccessToken();
+        }
       }
     }
     catch(Exception e) {
-      throw new DocuException(e.getMessage(), e);
+      if (e instanceof ApiException) {
+        ApiException api = (ApiException)e;
+        String body = api.getResponseBody();
+        if (body != null && body.contains(CONSENT_REQUIRED)) {
+          throw new ModuleException(DocuErrorType.CONSENT_REQUIRED, e);
+        }
+      }
+      throw new ModuleException(DocuErrorType.INVALID_REQUEST, e);
     }
     return result;
   }
