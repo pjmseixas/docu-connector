@@ -27,12 +27,12 @@ Once present, you can add a dependency to your pom.xml to incorporate the module
 Before you can use the connector, you will need to provide consent for it to impersonate a DocuSign user. DocuSign provides two ways of providing consent, either [individual consent](https://developers.docusign.com/esign-rest-api/guides/authentication/obtaining-consent#individual-consent) or [admin consent](https://developers.docusign.com/esign-rest-api/guides/authentication/obtaining-consent#admin-consent-for-external-applications). Use the appropriate link below to complete the consent process:
 
 + Individual Consent
-    > [Provide Individual Consent for a demo/sandbox account](https://account-d.docusign.com/oauth/auth?response_type=code&scope=signature%20impersonation&client_id=480bf239-9265-4f94-a333-5b1eebde0300&redirect_uri=https://www.mule.org.uk/docu-connector/), or
-    > [Provide Individual Consent for a production account](https://account.docusign.com/oauth/auth?response_type=code&scope=signature%20impersonation&client_id=480bf239-9265-4f94-a333-5b1eebde0300&redirect_uri=https://www.mule.org.uk/docu-connector/)
+    + [Provide Individual Consent for a demo/sandbox account](https://account-d.docusign.com/oauth/auth?response_type=code&scope=signature%20impersonation&client_id=480bf239-9265-4f94-a333-5b1eebde0300&redirect_uri=https://www.mule.org.uk/docu-connector/), or
+    + [Provide Individual Consent for a production account](https://account.docusign.com/oauth/auth?response_type=code&scope=signature%20impersonation&client_id=480bf239-9265-4f94-a333-5b1eebde0300&redirect_uri=https://www.mule.org.uk/docu-connector/)
 
 + Admin Consent
-    > [Provide Admin Consent for a demo/sandbox account](https://account-d.docusign.com/oauth/auth?response_type=code&scope=openid&client_id=480bf239-9265-4f94-a333-5b1eebde0300&redirect_uri=https://www.mule.org.uk/docu-connector/&admin_consent_scope=signature%20impersonation), or
-    > [Provide Admin Consent for a production account](https://account-d.docusign.com/oauth/auth?response_type=code&scope=openid&client_id=480bf239-9265-4f94-a333-5b1eebde0300&redirect_uri=https://www.mule.org.uk/docu-connector/&admin_consent_scope=signature%20impersonation)
+    + [Provide Admin Consent for a demo/sandbox account](https://account-d.docusign.com/oauth/auth?response_type=code&scope=openid&client_id=480bf239-9265-4f94-a333-5b1eebde0300&redirect_uri=https://www.mule.org.uk/docu-connector/&admin_consent_scope=signature%20impersonation), or
+    + [Provide Admin Consent for a production account](https://account-d.docusign.com/oauth/auth?response_type=code&scope=openid&client_id=480bf239-9265-4f94-a333-5b1eebde0300&redirect_uri=https://www.mule.org.uk/docu-connector/&admin_consent_scope=signature%20impersonation)
 
 ## Usage
 The "Get user access token" component can be placed into your flow like any other component, with the access token being assigned to a target variable of your choosing:
