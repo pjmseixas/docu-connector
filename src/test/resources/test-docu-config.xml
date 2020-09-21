@@ -4,9 +4,13 @@
       xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
           http://www.mulesoft.org/schema/mule/docu http://www.mulesoft.org/schema/mule/docu/current/mule-docu.xsd">
 
-    <docu:config name="docu-config"
+    <docu:config name="demo-config"
                  authURI="account-d.docusign.com"
                  userId="691e44d0-5ba2-47bf-b584-edcd91aab2ab"/>
+
+    <docu:config name="prod-config"
+                 authURI="account.docusign.com"
+                 userId="87e23108-dc99-4cbd-8635-f66f956cb710"/>
 
     <docu:config name="unknown-host-config"
                  authURI="account-d.docusign.net"
@@ -16,8 +20,12 @@
                  authURI="account-d.docusign.com"
                  userId="ec406c29-b6b3-479f-86cf-40317772b12c"/>
 
-    <flow name="getUserAccessToken">
-        <docu:get-user-access-token config-ref="docu-config"/>
+    <flow name="getDemoUserAccessToken">
+        <docu:get-user-access-token config-ref="demo-config"/>
+    </flow>
+
+    <flow name="getProdUserAccessToken">
+        <docu:get-user-access-token config-ref="prod-config"/>
     </flow>
 
     <flow name="unknownHost">

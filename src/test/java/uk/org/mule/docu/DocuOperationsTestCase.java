@@ -18,8 +18,17 @@ public class DocuOperationsTestCase extends MuleArtifactFunctionalTestCase {
   }
 
   @Test
-  public void executeGetUserAccessToken() throws Exception {
-    String payloadValue = ((String) flowRunner("getUserAccessToken").run()
+  public void executeGetDemoUserAccessToken() throws Exception {
+    String payloadValue = ((String) flowRunner("getDemoUserAccessToken").run()
+                                      .getMessage()
+                                      .getPayload()
+                                      .getValue());
+    assertThat(payloadValue, is(notNullValue()));
+  }
+
+  @Test
+  public void executeGetProdUserAccessToken() throws Exception {
+    String payloadValue = ((String) flowRunner("getProdUserAccessToken").run()
                                       .getMessage()
                                       .getPayload()
                                       .getValue());
