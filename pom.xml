@@ -12,7 +12,7 @@
 
     <groupId>uk.org.mule.docu</groupId>
     <artifactId>docu-connector</artifactId>
-    <version>0.5.0</version>
+    <version>0.6.0</version>
     <packaging>mule-extension</packaging>
 
     <name>DocuSign Connector</name>

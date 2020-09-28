@@ -6,7 +6,7 @@ Once incorporated into your Anypoint Studio project, it provides a single Mule c
 
 ## Prerequisites
 
-It is assumed that you already have access to a demo/sandbox DocuSign account, and are able to perform the one-time authentication as the user you wish to impersonate within your Mule flow - see the "Provide Consent" section below.
+It is assumed that you already have access to a DocuSign account, and are able to complete the one-time consent process described below.
 
 ## Installation
 
@@ -17,14 +17,14 @@ Once present, you can add a dependency to your pom.xml to incorporate the module
 <dependency>  
   <groupId>uk.org.mule.docu</groupId>  
   <artifactId>docu-connector</artifactId>  
-  <version>0.5.0</version>  
+  <version>0.6.0</version>  
   <classifier>mule-plugin</classifier>  
 </dependency>  
 ```
 
 ## Provide Consent
 
-Before you can use the connector, you will need to provide consent for it to impersonate a DocuSign user. DocuSign provides two ways of providing consent, either [individual consent](https://developers.docusign.com/esign-rest-api/guides/authentication/obtaining-consent#individual-consent) or [admin consent](https://developers.docusign.com/esign-rest-api/guides/authentication/obtaining-consent#admin-consent-for-external-applications). Use the appropriate link below to complete the consent process:
+Before you can use the connector, you will need to provide consent for it to impersonate a DocuSign user. DocuSign provides two ways of providing consent, either [individual consent](https://developers.docusign.com/platform/auth/consent/obtaining-individual-consent) or [admin consent](https://developers.docusign.com/platform/auth/consent/obtaining-admin-consent-external/). Click on the appropriate link below to complete the one-time consent process:
 
 + Individual Consent
     + [Provide Individual Consent for a demo/sandbox account](https://account-d.docusign.com/oauth/auth?response_type=code&scope=signature%20impersonation&client_id=480bf239-9265-4f94-a333-5b1eebde0300&redirect_uri=https://www.mule.org.uk/docu-connector/), or
