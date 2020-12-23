@@ -32,7 +32,7 @@ Before you can use the connector, you will need to provide consent for it to imp
 
 + Admin Consent
     + [Provide Admin Consent for a demo/sandbox account](https://account-d.docusign.com/oauth/auth?response_type=code&scope=openid&client_id=480bf239-9265-4f94-a333-5b1eebde0300&redirect_uri=https://www.mule.org.uk/docu-connector/&admin_consent_scope=signature%20impersonation), or
-    + [Provide Admin Consent for a production account](https://account-d.docusign.com/oauth/auth?response_type=code&scope=openid&client_id=480bf239-9265-4f94-a333-5b1eebde0300&redirect_uri=https://www.mule.org.uk/docu-connector/&admin_consent_scope=signature%20impersonation)
+    + [Provide Admin Consent for a production account](https://account.docusign.com/oauth/auth?response_type=code&scope=openid&client_id=480bf239-9265-4f94-a333-5b1eebde0300&redirect_uri=https://www.mule.org.uk/docu-connector/&admin_consent_scope=signature%20impersonation)
 
 ## Usage
 The "Get user access token" component can be placed into your flow like any other component, with the access token being assigned to a target variable of your choosing:
