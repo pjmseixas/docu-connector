@@ -12,7 +12,7 @@
 
     <groupId>uk.org.mule.docu</groupId>
     <artifactId>docu-connector</artifactId>
-    <version>0.6.0</version>
+    <version>0.7.0</version>
     <packaging>mule-extension</packaging>
 
     <name>DocuSign Connector</name>
@@ -22,7 +22,7 @@
         <dependency>
             <groupId>com.docusign</groupId>
             <artifactId>docusign-esign-java</artifactId>
-            <version>3.5.0</version>
+            <version>3.10.1</version>
         </dependency>
     </dependencies>
 </project>

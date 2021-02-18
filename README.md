@@ -17,7 +17,7 @@ Once present, you can add a dependency to your pom.xml to incorporate the module
 <dependency>  
   <groupId>uk.org.mule.docu</groupId>  
   <artifactId>docu-connector</artifactId>  
-  <version>0.6.0</version>  
+  <version>0.7.0</version>  
   <classifier>mule-plugin</classifier>  
 </dependency>  
 ```
